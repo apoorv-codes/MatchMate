@@ -53,15 +53,15 @@ class DobSwiftData {
     }
 }
 
-// MARK: - ID
+// MARK: - IDSwiftData
 @Model
 class IDSwiftData {
     var name: String
-    var value: UUID
+    var value: String
 
-    init(name: String) {
+    init(name: String, value: String) {
         self.name = name
-        self.value = UUID()
+        self.value = value
     }
 }
 
@@ -169,7 +169,6 @@ class PictureSwiftData {
     }
 }
 
-// Extension for UserSwiftDataModel
 extension UserSwiftDataModel {
     func toDataModel() -> UserDataModel {
         let name = Name(title: self.name.title,
@@ -197,8 +196,8 @@ extension UserSwiftDataModel {
         
         let registered = Dob(date: self.registered.date,
                              age: self.registered.age)
-        
-        let uid = ID(name: self.id.name)
+       
+        let uid = UID(name: self.id.name, v: self.id.value)
         
         let picture = Picture(large: self.picture.large,
                               medium: self.picture.medium,

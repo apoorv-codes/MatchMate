@@ -8,11 +8,20 @@ import Foundation
 import Combine
 
 protocol HomeRemoteRepositoryProtocol {
-    func fetchHomeData() -> AnyPublisher<UsersDataModel, Error>
+    func fetchHomeData(page: Int) -> AnyPublisher<UsersDataModel, Error>
 }
 
-static class HomeRemoteRepository: HomeRemoteRepositoryProtocol {
-    func fetchHomeData() -> AnyPublisher<UsersDataModel, Error> {
-        
+final class HomeRemoteRepository: HomeRemoteRepositoryProtocol {
+    private let networkManager: NetworkManagerProtocol
+    
+    init(networkManager: NetworkManagerProtocol) {
+        self.networkManager = networkManager
+    }
+    
+    func fetchHomeData(page: Int) -> AnyPublisher<UsersDataModel, Error> {
+        guard let requestModel = try? HomeEndpoint.getUsersList(page: page).asURLRequest() else {
+            return Fail(error: URLError(URLError.unsupportedURL)).eraseToAnyPublisher()
+        }
+        return networkManager.executeRequest(requestModel, responseType: UsersDataModel.self)
     }
 }

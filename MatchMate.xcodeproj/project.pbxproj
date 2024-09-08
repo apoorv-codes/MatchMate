@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1080613A2C8C7BC400092C28 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 108061392C8C7BC400092C28 /* Nuke */; };
+		1080613C2C8C7BC400092C28 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 1080613B2C8C7BC400092C28 /* NukeExtensions */; };
+		1080613E2C8C7BC400092C28 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1080613D2C8C7BC400092C28 /* NukeUI */; };
+		108061402C8C7BC400092C28 /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = 1080613F2C8C7BC400092C28 /* NukeVideo */; };
+		108061422C8C81E300092C28 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 108061412C8C81E300092C28 /* Nuke */; };
+		108061442C8C81E300092C28 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 108061432C8C81E300092C28 /* NukeExtensions */; };
+		108061462C8C81E300092C28 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 108061452C8C81E300092C28 /* NukeUI */; };
+		108061482C8C81E300092C28 /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = 108061472C8C81E300092C28 /* NukeVideo */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		10F45A0C2C8A0D69008C56D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +63,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				108061462C8C81E300092C28 /* NukeUI in Frameworks */,
+				108061422C8C81E300092C28 /* Nuke in Frameworks */,
+				108061442C8C81E300092C28 /* NukeExtensions in Frameworks */,
+				108061482C8C81E300092C28 /* NukeVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,18 +81,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1080613E2C8C7BC400092C28 /* NukeUI in Frameworks */,
+				1080613A2C8C7BC400092C28 /* Nuke in Frameworks */,
+				1080613C2C8C7BC400092C28 /* NukeExtensions in Frameworks */,
+				108061402C8C7BC400092C28 /* NukeVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		108061382C8C7BC400092C28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		10F459F22C8A0D67008C56D6 = {
 			isa = PBXGroup;
 			children = (
 				10F459FD2C8A0D67008C56D6 /* MatchMate */,
 				10F45A0E2C8A0D69008C56D6 /* MatchMateTests */,
 				10F45A182C8A0D69008C56D6 /* MatchMateUITests */,
+				108061382C8C7BC400092C28 /* Frameworks */,
 				10F459FC2C8A0D67008C56D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +139,10 @@
 			);
 			name = MatchMate;
 			packageProductDependencies = (
+				108061412C8C81E300092C28 /* Nuke */,
+				108061432C8C81E300092C28 /* NukeExtensions */,
+				108061452C8C81E300092C28 /* NukeUI */,
+				108061472C8C81E300092C28 /* NukeVideo */,
 			);
 			productName = MatchMate;
 			productReference = 10F459FB2C8A0D67008C56D6 /* MatchMate.app */;
@@ -158,6 +189,10 @@
 			);
 			name = MatchMateUITests;
 			packageProductDependencies = (
+				108061392C8C7BC400092C28 /* Nuke */,
+				1080613B2C8C7BC400092C28 /* NukeExtensions */,
+				1080613D2C8C7BC400092C28 /* NukeUI */,
+				1080613F2C8C7BC400092C28 /* NukeVideo */,
 			);
 			productName = MatchMateUITests;
 			productReference = 10F45A152C8A0D69008C56D6 /* MatchMateUITests.xctest */;
@@ -195,6 +230,9 @@
 			);
 			mainGroup = 10F459F22C8A0D67008C56D6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				104CEC742C8A101A0009B403 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 10F459FC2C8A0D67008C56D6 /* Products */;
 			projectDirPath = "";
@@ -395,15 +433,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MatchMate/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MatchMate/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 3NRS47XA44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MatchMate;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,15 +465,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MatchMate/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MatchMate/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 3NRS47XA44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MatchMate;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +498,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3NRS47XA44;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = peopleinteractive.MatchMateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -473,7 +517,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3NRS47XA44;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = peopleinteractive.MatchMateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,6 +535,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3NRS47XA44;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = peopleinteractive.MatchMateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -508,6 +553,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3NRS47XA44;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = peopleinteractive.MatchMateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -558,6 +604,60 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		104CEC742C8A101A0009B403 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		108061392C8C7BC400092C28 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104CEC742C8A101A0009B403 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		1080613B2C8C7BC400092C28 /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104CEC742C8A101A0009B403 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		1080613D2C8C7BC400092C28 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104CEC742C8A101A0009B403 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		1080613F2C8C7BC400092C28 /* NukeVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104CEC742C8A101A0009B403 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeVideo;
+		};
+		108061412C8C81E300092C28 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104CEC742C8A101A0009B403 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		108061432C8C81E300092C28 /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104CEC742C8A101A0009B403 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		108061452C8C81E300092C28 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104CEC742C8A101A0009B403 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		108061472C8C81E300092C28 /* NukeVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104CEC742C8A101A0009B403 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeVideo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 10F459F32C8A0D67008C56D6 /* Project object */;
 }

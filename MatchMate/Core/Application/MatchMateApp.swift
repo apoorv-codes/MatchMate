@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct MatchMateApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                Home()
+            }
         }
     }
 }
+
